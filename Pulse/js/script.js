@@ -16,51 +16,54 @@ var slider = tns({
     slider.goTo('next');
   })
 
-  let content       = document.querySelector('.catalog-item__content'),
-      list          = document.querySelector('.catalog-item__list'),
-      firstTab      = document.querySelector('#catalog__tab_first'),
-      secondTab     = document.querySelector('#catalog__tab_second'),
-      thirtyTab     = document.querySelector('#catalog__tab_thirty'),
-      firstContent  = document.querySelector('#catalog__content_first'),
-      secondContent = document.querySelector('#catalog__content_second'),
-      thirtyContent = document.querySelector('#catalog__content_thirty');
+  let tabs          = document.querySelectorAll('.catalog__tab'),
+  contents      = document.querySelectorAll('.catalog__content'),
+  activeElement = 0;
 
-  document.querySelector('.catalog-item__link').addEventListener('click', function () {
-    list.classList.add('catalog-item__list_active'),
-    content.classList.remove('catalog-item__content_active');
+if(tabs.length == contents.length) {
+contents[activeElement].style.display = 'flex'
+tabs[activeElement].classList.add('catalog__tab_active')
+
+tabs.forEach((tab, id) => {
+
+tab.addEventListener('click', function() {
+
+  tabs.forEach(item => {
+    item.classList.remove('catalog__tab_active')
   })
 
-  document.querySelector('.catalog-item__back-link').addEventListener('click', function () {
-    list.classList.remove('catalog-item__list_active'),
-    content.classList.add('catalog-item__content_active');
+  tab.classList.add('catalog__tab_active')
+
+  contents.forEach(content => {
+    content.style.display = 'none'
   })
 
-  document.querySelector('#catalog__tab_second').addEventListener('click', function () {
-    firstTab.classList.remove('catalog__tab_active'),
-    thirtyTab.classList.remove('catalog__tab_active'),
-    secondTab.classList.add('catalog__tab_active'),
-    firstContent.classList.remove('catalog__content_active'),
-    thirtyContent.classList.remove('catalog__content_active'),
-    secondContent.classList.add('catalog__content_active');
-  })
+  contents[id].style.display = 'flex'
+})
+})
 
-  document.querySelector('#catalog__tab_thirty').addEventListener('click', function () {
-    firstTab.classList.remove('catalog__tab_active'),
-    secondTab.classList.remove('catalog__tab_active'),
-    thirtyTab.classList.add('catalog__tab_active'),
-    firstContent.classList.remove('catalog__content_active'),
-    secondContent.classList.remove('catalog__content_active'),
-    thirtyContent.classList.add('catalog__content_active');
-  })
+} else {
+document.querySelector('.catalog__content').innerHTML = 'Error'
+}
 
-  document.querySelector('#catalog__tab_first').addEventListener('click', function () {
-    secondTab.classList.remove('catalog__tab_active'),
-    thirtyTab.classList.remove('catalog__tab_active'),
-    firstTab.classList.add('catalog__tab_active'),
-    secondContent.classList.remove('catalog__content_active'),
-    thirtyContent.classList.remove('catalog__content_active'),
-    firstContent.classList.add('catalog__content_active');
-  })
+// catalog
 
+$(document).ready(function(){
 
-  
+  $('.catalog-item__link').each(function(i){
+    $(this).on('click', function(e){
+      e.preventDefault();
+      $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+      $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+    });
+  });
+
+  $('.catalog-item__back-link').each(function(i){
+    $(this).on('click', function(e){
+      e.preventDefault();
+      $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+      $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+    });
+  });
+
+});
