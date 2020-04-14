@@ -120,12 +120,12 @@ $(document).ready(function(){
 
   //mail
 
-  $('#consultation form').submit(function(e) {
+  $('form').submit(function(e) {
     e.preventDefault();
     console.log(123);
     $.ajax({
         type: "POST",
-        url: "../mailer/smart.php",
+        url: "mailer/smart.php",
         data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
