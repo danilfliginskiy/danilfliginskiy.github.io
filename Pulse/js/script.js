@@ -48,6 +48,8 @@ document.querySelector('.catalog__content').innerHTML = 'Error'
 
 $(document).ready(function(){
 
+
+
   // catalog
 
   $('.catalog-item__link').each(function(i){
@@ -120,12 +122,12 @@ $(document).ready(function(){
 
   //mail
 
-  $('form').submit(function(e) {
+  $('#consultation form').submit(function(e) {
     e.preventDefault();
     console.log(123);
     $.ajax({
         type: "POST",
-        url: "mailer/smart.php",
+        url: "../mailer/smart.php",
         data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
@@ -137,4 +139,24 @@ $(document).ready(function(){
     return false;
   });
 
+  //smooth scroll to up
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1300) {
+      $('.pageup').fadeIn('slow');
+    } else {
+      $('.pageup').fadeOut('slow');
+    }
+  });
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+
+
 });
+
+new WOW().init();
