@@ -34,3 +34,27 @@ window.addEventListener('DOMContentLoaded', () => {
     menu.classList.toggle('header__menu_active');
   });
 });
+
+$( document ).ready(function() {
+  
+
+  // кнопки на карточках
+
+  $('.button_price').each(function(i){
+    $(this).on('click', function(e){
+      e.preventDefault();
+      $('.prices__front').eq(i).addClass('prices__front_active');
+      $('.prices__back').eq(i).addClass('prices__back_active');
+    });
+  });
+
+  $('.button_price-back').each(function(i){
+    $(this).on('click', function(e){
+      e.preventDefault();
+      $('.prices__front').eq(i).removeClass('prices__front_active');
+      $('.prices__back').eq(i).removeClass('prices__back_active');
+    });
+  });
+
+
+});
