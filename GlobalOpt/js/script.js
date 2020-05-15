@@ -56,5 +56,25 @@ $( document ).ready(function() {
     });
   });
 
+  //слайдер в блоке с отзывами
+
+  $(document).ready(function(){
+    $('.carousel').slick({
+      speed: 1000,
+      slidesToShow: 3,
+      centerMode: true,
+      responsive: [
+        {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false,
+            fade: true
+          }
+        }
+      ]
+    });
+  });
+
 
 });
