@@ -76,5 +76,163 @@ $( document ).ready(function() {
     });
   });
 
+  //smooth scroll to up
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1300) {
+      $('.pageup').fadeIn('slow');
+    } else {
+      $('.pageup').fadeOut('slow');
+    }
+  });
+
+  $(function(){
+    $("a[href^='#']").click(function(){
+      var _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+    });
+  });
+
+  //modal
+
+  $('[data-modal = consultation]').on('click', function(){
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+  
+  $('[data-modal = payment]').on('click', function(){
+    $('.overlay, #payment').fadeIn('slow');
+  });
+
+  $('.modal__close').on('click', function(){
+    $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+  });
+
+  //validate
+
+  $('#consultation-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя",
+        minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+      },
+      phone: "Введите Ваш номер телефона",
+      email: {
+        required: "Введите свою почту",
+        email: "Проверьте правильность ввода почты"
+      }
+    }
+  });
+  $('#questions-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      message: "required"
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя",
+        minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+      },
+      phone: "Введите Ваш номер телефона",
+      email: {
+        required: "Введите свою почту",
+        email: "Проверьте правильность ввода почты"
+      },
+      message: "Введите ваше сообщение"
+    }
+  });
+  $('#consultation form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя",
+        minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+      },
+      phone: "Введите Ваш номер телефона",
+      email: {
+        required: "Введите свою почту",
+        email: "Проверьте правильность ввода почты"
+      }
+    }
+  });
+  $('#payment form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      select: "required"
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя",
+        minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+      },
+      phone: "Введите Ваш номер телефона",
+      email: {
+        required: "Введите свою почту",
+        email: "Проверьте правильность ввода почты"
+      },
+      select: "Выберите способ доставки"
+    }
+  });
+
+  //mask for phone
+
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  //mailer
+
+  $('form').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function(){
+      $(this).find("input").val("");
+
+      $('#consultation, #payment').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
 
 });
