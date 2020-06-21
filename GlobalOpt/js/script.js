@@ -195,7 +195,7 @@ $( document ).ready(function() {
         required: true,
         email: true
       },
-      select: "required"
+      choice: "required"
     },
     messages: {
       name: {
@@ -207,7 +207,7 @@ $( document ).ready(function() {
         required: "Введите свою почту",
         email: "Проверьте правильность ввода почты"
       },
-      select: "Выберите способ доставки"
+      choice: "Выберите способ доставки"
     }
   });
 
