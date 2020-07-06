@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
             $button.removeClass('open');
             $button.addClass('close');
           } else {
-            $('.header').eq(i).addClass('header_active');
+            $('.header').eq(i).toggleClass('header_active');
           }
         });
       });
