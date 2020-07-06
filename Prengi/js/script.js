@@ -90,7 +90,72 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       });
 
+      //smooth scroll to up
+  
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 1000) {
+          $('.pageup').fadeIn('slow');
+        } else {
+          $('.pageup').fadeOut('slow');
+        }
+      });
+    
+      $(function(){
+        $("a[href^='#']").click(function(){
+          var _href = $(this).attr("href");
+          $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+          return false;
+        });
+      });
+
+      //modal
+  
+    $('[data-modal = acces]').on('click', function(){
+      $('.overlay, #acces').fadeIn('slow');
     });
+  
+    $('.modal__close').on('click', function(){
+      $('.overlay, #acces, #thanks').fadeOut('slow');
+    });
+  
+    //validate
+  
+    $('#modal-form').validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Введите Ваше имя",
+          minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+        },
+        phone: "Введите Ваш номер телефона",
+        email: {
+          required: "Введите свою почту",
+          email: "Проверьте правильность ввода почты"
+        }
+      }
+    });
+  
+    //mask for phone
+  
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    });
+
+
+
+    //JQuery END
+
+
 
     //dynamic adaptiv
 
