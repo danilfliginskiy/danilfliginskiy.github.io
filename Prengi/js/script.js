@@ -110,44 +110,49 @@ window.addEventListener('DOMContentLoaded', () => {
 
       //modal
   
-    $('[data-modal = acces]').on('click', function(){
-      $('.overlay, #acces').fadeIn('slow');
-    });
-  
-    $('.modal__close').on('click', function(){
-      $('.overlay, #acces, #thanks').fadeOut('slow');
-    });
-  
-    //validate
-  
-    $('#modal-form').validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2
+      $('[data-modal = acces]').on('click', function(){
+        $('.overlay, #acces').fadeIn('slow');
+      });
+    
+      $('.modal__close').on('click', function(){
+        $('.overlay, #acces, #thanks').fadeOut('slow');
+      });
+    
+      //validate
+    
+      $('#modal-form').validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
         },
-        phone: "required",
-        email: {
-          required: true,
-          email: true
+        messages: {
+          name: {
+            required: "Введите Ваше имя",
+            minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
+          },
+          phone: "Введите Ваш номер телефона",
+          email: {
+            required: "Введите свою почту",
+            email: "Проверьте правильность ввода почты"
+          }
         }
-      },
-      messages: {
-        name: {
-          required: "Введите Ваше имя",
-          minlength: jQuery.validator.format("Нужно ввести больше {0} символов")
-        },
-        phone: "Введите Ваш номер телефона",
-        email: {
-          required: "Введите свою почту",
-          email: "Проверьте правильность ввода почты"
-        }
-      }
-    });
-  
-    //mask for phone
-  
-    $('input[name=phone]').mask("+7 (999) 999-99-99");
+      });
+    
+      //mask for phone
+    
+      $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+      //remove animations for navigation__items on 768px
+
+      var windowWidth = $(window).width();
+      if(windowWidth < 992)$(".navigation__items").removeClass("fadeInRight");
 
     });
 
