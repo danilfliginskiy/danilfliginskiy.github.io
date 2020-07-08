@@ -1,6 +1,7 @@
-//hamburger
-
 window.addEventListener('DOMContentLoaded', () => {
+
+  //hamburger
+
   const btn       = document.querySelector("#hamburger"),
         cls       = { open: "open", close: "close" },
         menu      = document.querySelector('.header__menu'),
@@ -106,6 +107,16 @@ window.addEventListener('DOMContentLoaded', () => {
     $('.modal__close').on('click', function(){
       $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
     });
+
+    $('.overlay').on('click', function(){
+      $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+    });
+
+    window.onkeydown = function(event) {
+      if ( event.keyCode == 27 ) {
+        $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+      }
+    };
   
     //validate
   
