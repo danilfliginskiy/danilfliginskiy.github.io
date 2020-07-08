@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $('.carousel').slick({
           speed: 1000,
           slidesToShow: 1,
+          waitForAnimate: false,
           dots: true,
           responsive: [
             {
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
           slidesToShow: 1,
           dots: true,
           infinite: true,
+          waitForAnimate: false,
           speed: 1000,
           cssEase: 'linear',
           customPaging: function (carousel_solutions, i) {
@@ -51,29 +53,29 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       $button.on('click', function(e){
-          e.preventDefault();
-          if( $('.header').hasClass('header_active') ){
-            $('.header').removeClass('header_active')
-            if( $button.hasClass('open') ){
-              $button.removeClass('open');
-              $button.addClass('close');
-              $('.navigation__items').toggleClass('navigation__items_active');$('.navigation__link').toggleClass('navigation__items_active');
-            } else {
-              $button.removeClass('close');
-              $button.addClass('open');
-              $('.navigation__items').toggleClass('navigation__items_active');
-            }
+        e.preventDefault();
+        if( $('.header').hasClass('header_active') ){
+          $('.header').removeClass('header_active')
+          if( $button.hasClass('open') ){
+            $button.removeClass('open');
+            $button.addClass('close');
+            $('.navigation__items').toggleClass('navigation__items_active');$('.navigation__link').toggleClass('navigation__items_active');
           } else {
-            if( $button.hasClass('open') ){
-              $button.removeClass('open');
-              $button.addClass('close');
-              $('.navigation__items').toggleClass('navigation__items_active');$('.navigation__link').toggleClass('navigation__items_active');
-            } else {
-              $button.removeClass('close');
-              $button.addClass('open');
-              $('.navigation__items').toggleClass('navigation__items_active');
-            }
+            $button.removeClass('close');
+            $button.addClass('open');
+            $('.navigation__items').toggleClass('navigation__items_active');
           }
+        } else {
+          if( $button.hasClass('open') ){
+            $button.removeClass('open');
+            $button.addClass('close');
+            $('.navigation__items').toggleClass('navigation__items_active');$('.navigation__link').toggleClass('navigation__items_active');
+          } else {
+            $button.removeClass('close');
+            $button.addClass('open');
+            $('.navigation__items').toggleClass('navigation__items_active');
+          }
+        }
       });
 
       $('.button_contacts').each(function(i){
@@ -88,6 +90,13 @@ window.addEventListener('DOMContentLoaded', () => {
             $('.header').eq(i).toggleClass('header_active');
           }
         });
+      });
+
+      $('section, footer').on('click', function(){
+        $('.header').removeClass('header_active');
+        $('.navigation__items').removeClass('navigation__items_active');
+        $button.removeClass('open');
+        $button.addClass('close');
       });
 
       //smooth scroll to up
@@ -117,6 +126,16 @@ window.addEventListener('DOMContentLoaded', () => {
       $('.modal__close').on('click', function(){
         $('.overlay, #acces, #thanks').fadeOut('slow');
       });
+
+      $('.overlay').on('click', function(){
+        $('.overlay, #acces, #thanks').fadeOut('slow');
+      });
+  
+      window.onkeydown = function(event) {
+        if ( event.keyCode == 27 ) {
+          $('.overlay, #acces, #thanks').fadeOut('slow');
+        }
+      };
     
       //validate
     
