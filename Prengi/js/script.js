@@ -121,6 +121,8 @@ window.addEventListener('DOMContentLoaded', () => {
   
       $('[data-modal = acces]').on('click', function(){
         $('.overlay, #acces').fadeIn('slow');
+        $('.navigation__items').removeClass('navigation__items_active');
+        $('.header__items').removeClass('header__items_active');
       });
     
       $('.modal__close').on('click', function(){
@@ -132,7 +134,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   
       window.onkeydown = function(event) {
-        if ( event.keyCode == 27 ) {
+        if ( event.code == 'Escape' ) {
           $('.overlay, #acces, #thanks').fadeOut('slow');
         }
       };
