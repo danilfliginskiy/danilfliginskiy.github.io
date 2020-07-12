@@ -49,6 +49,9 @@ window.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('navigation__items_active');
         $button.removeClass('open');
         $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
       });
     });
 
@@ -60,21 +63,33 @@ window.addEventListener('DOMContentLoaded', () => {
           $button.removeClass('open');
           $button.addClass('close');
           $('.navigation__items').toggleClass('navigation__items_active');
+          $('body').css({
+            'overflow':'visible'
+          });
         } else {
           $button.removeClass('close');
           $button.addClass('open');
           $('.navigation__items').toggleClass('navigation__items_active');
+          $('body').css({
+            'overflow':'hidden'
+          });
         }
       } else {
         if( $button.hasClass('open') ){
           $button.removeClass('open');
           $button.addClass('close');
           $('.navigation__items').toggleClass('navigation__items_active');
+          $('body').css({
+            'overflow':'visible'
+          });
         } else {
           $('.overlay, #acces, #thanks').fadeOut('slow');
           $button.removeClass('close');
           $button.addClass('open');
           $('.navigation__items').toggleClass('navigation__items_active');
+          $('body').css({
+            'overflow':'hidden'
+          });
         }
       }
     });
@@ -87,10 +102,28 @@ window.addEventListener('DOMContentLoaded', () => {
           $('.header').eq(i).addClass('header_active');
           $button.removeClass('open');
           $button.addClass('close');
+          $('body').css({
+            'overflow':'visible'
+          });
         } else {
           $('.header').eq(i).toggleClass('header_active');
           $('.overlay, #acces, #thanks').fadeOut('slow');
+          if( $('.header').hasClass('header_active') ) {
+            $('body').css({
+              'overflow':'hidden'
+            });
+          } else {
+            $('body').css({
+              'overflow':'visible'
+            });
+          }
         }
+      });
+    });
+
+    $('.header__close').on('click', function(){
+      $('body').css({
+        'overflow':'visible'
       });
     });
 
@@ -99,6 +132,15 @@ window.addEventListener('DOMContentLoaded', () => {
       $('.navigation__items').removeClass('navigation__items_active');
       $button.removeClass('open');
       $button.addClass('close');
+      if ($('[data-modal = acces]').hasClass('modal_active')) {
+        $('body').css({
+          'overflow':'hidden'
+        });
+      } else {
+        $('body').css({
+          'overflow':'visible'
+        });
+      }
     });
 
     //smooth scroll to up
@@ -123,21 +165,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
     $('[data-modal = acces]').on('click', function(){
       $('.overlay, #acces').fadeIn('slow');
+      $('[data-modal = acces]').addClass('modal_active');
       $('.navigation__items').removeClass('navigation__items_active');
       $('.header__items').removeClass('header__items_active');
+      $('body').css({
+        'overflow':'hidden'
+      });
     });
   
     $('.modal__close').on('click', function(){
       $('.overlay, #acces, #thanks').fadeOut('slow');
+      $('body').css({
+        'overflow':'visible'
+      });
     });
 
     $('.overlay').on('click', function(){
       $('.overlay, #acces, #thanks').fadeOut('slow');
+      $('body').css({
+        'overflow':'visible'
+      });
     });
 
     window.onkeydown = function(event) {
       if ( event.code == 'Escape' ) {
         $('.overlay, #acces, #thanks').fadeOut('slow');
+        $('body').css({
+          'overflow':'visible'
+        });
       }
     };
   
