@@ -1,42 +1,41 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-  //hamburger
-
-  const btn       = document.querySelector("#hamburger"),
-        cls       = { open: "open", close: "close" },
-        menu      = document.querySelector('.header__menu'),
-        menuItem  = document.querySelectorAll('.header__link'),
-        hamburger = document.querySelector('.hamburger');
-  let btnClass = cls.open;
-
-  btn.addEventListener("click", () => {
-    if (btn.classList.contains(cls.open)) {
-      btn.classList.toggle(btnClass);
-      btnClass = cls.close;
-    } else if (btn.classList.contains(cls.close)) {
-      btn.classList.toggle(btnClass);
-      btnClass = cls.open;
-    };
-
-    void btn.offsetWidth;
-    btn.classList.add(btnClass);
-  });
-
-  menuItem.forEach(item => { //clicking on the navigation link
-    item.addEventListener('click', () => {
-      menu.classList.toggle('header__menu_active');
-      btn.classList.toggle(btnClass);
-      btnClass = cls.open;
-    });
-  });
-
-  hamburger.addEventListener('click', () => { //clicking on the hamburger button
-    menu.classList.toggle('header__menu_active');
-  });
-
-
   $( document ).ready(function() {
-  
+
+
+    //hamburger
+
+    var $button = $('#hamburger');
+    menuItem  = document.querySelectorAll('.header__link');
+    menu      = document.querySelector('.header__menu');
+
+    menuItem.forEach(item => { //clicking on the navigation link
+      item.addEventListener('click', () => {
+        menu.classList.toggle('header__menu_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+      });
+    });
+
+    $button.on('click', function(e){
+      e.preventDefault();
+        if( $button.hasClass('open') ){
+          $('.header__menu').toggleClass('header__menu_active');
+          $button.removeClass('open');
+          $button.addClass('close');
+        } else {
+          $('.header__menu').toggleClass('header__menu_active');
+          $button.removeClass('close');
+          $button.addClass('open');
+          $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+        }
+    });
+
+    $('section, footer').on('click', function(){
+      $('.header__menu').removeClass('header__menu_active');
+      $button.removeClass('open');
+      $button.addClass('close');
+    });
 
     //buttons on cards
   
