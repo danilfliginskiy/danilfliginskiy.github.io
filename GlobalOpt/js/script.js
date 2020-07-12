@@ -14,20 +14,33 @@ window.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('header__menu_active');
         $button.removeClass('open');
         $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
       });
     });
 
+
+
     $button.on('click', function(e){
       e.preventDefault();
+      $('[data-modal = consultation]').removeClass('modal_active');
+      $('[data-modal = payment]').removeClass('modal_active');
         if( $button.hasClass('open') ){
           $('.header__menu').toggleClass('header__menu_active');
           $button.removeClass('open');
           $button.addClass('close');
+          $('body').css({
+            'overflow':'visible'
+          });
         } else {
           $('.header__menu').toggleClass('header__menu_active');
           $button.removeClass('close');
           $button.addClass('open');
           $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+          $('body').css({
+            'overflow':'hidden'
+          });
         }
     });
 
@@ -35,6 +48,15 @@ window.addEventListener('DOMContentLoaded', () => {
       $('.header__menu').removeClass('header__menu_active');
       $button.removeClass('open');
       $button.addClass('close');
+      if ($('[data-modal = consultation]').hasClass('modal_active') || $('[data-modal = payment]').hasClass('modal_active')) {
+        $('body').css({
+          'overflow':'hidden'
+        });
+      } else {
+        $('body').css({
+          'overflow':'visible'
+        });
+      }
     });
 
     //buttons on cards
@@ -97,23 +119,40 @@ window.addEventListener('DOMContentLoaded', () => {
   
     $('[data-modal = consultation]').on('click', function(){
       $('.overlay, #consultation').fadeIn('slow');
+      $('[data-modal = consultation]').addClass('modal_active');
+      $('body').css({
+        'overflow':'hidden'
+      });
     });
     
     $('[data-modal = payment]').on('click', function(){
       $('.overlay, #payment').fadeIn('slow');
+      $('[data-modal = payment]').addClass('modal_active');
+      $('body').css({
+        'overflow':'hidden'
+      });
     });
   
     $('.modal__close').on('click', function(){
       $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+      $('body').css({
+        'overflow':'visible'
+      });
     });
 
     $('.overlay').on('click', function(){
       $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+      $('body').css({
+        'overflow':'visible'
+      });
     });
 
     window.onkeydown = function(event) {
       if ( event.keyCode == 27 ) {
         $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+        $('body').css({
+          'overflow':'visible'
+        });
       }
     };
   
