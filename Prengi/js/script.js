@@ -57,6 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     $button.on('click', function(e){
       e.preventDefault();
+      $('[data-modal = acces]').removeClass('modal_active');
       if( $('.header').hasClass('header_active') ){
         $('.header').removeClass('header_active')
         if( $button.hasClass('open') ){
