@@ -32,11 +32,21 @@ window.addEventListener('DOMContentLoaded', () => {
         dots: true,
         draggable: false,
         speed: 1000
-      })
-  
-    });
+      });
 
-    //end JQUERY
+      //buttons in paragraph
+
+      $('.about__button').click(function() {
+        $(this)
+          .siblings('.about__button')
+          .addBack()
+          .toggleClass('about__button_active')
+          .siblings('.about__text')
+          .slice(2)
+          .toggleClass('about__text_active');
+      });
+
+      //tabs
 
       let tabs      = document.querySelectorAll('.catalog__tab'),
       contents      = document.querySelectorAll('.carousel_catalog'),
@@ -59,8 +69,34 @@ window.addEventListener('DOMContentLoaded', () => {
           });
 
           contents[id].classList.add('carousel_catalog_active');
+          $('.carousel_catalog').slick('setPosition');
           
         });
       });
+
+      //smooth scroll to up
+
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 1000) {
+          $('.pageup').fadeIn('slow');
+        } else {
+          $('.pageup').fadeOut('slow');
+        }
+      });
+      $(function(){
+        $("a[href^='#']").click(function(){
+          var _href = $(this).attr("href");
+          $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+          return false;
+        });
+      });
+  
+    });
+
+
+
+    //end JQUERY
+
+   
 
 });
