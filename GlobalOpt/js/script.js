@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $('body').css({
           'overflow':'visible'
         });
+        $('.header__overlay').removeClass('header__overlay_active');
       });
     });
 
@@ -26,37 +27,42 @@ window.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       $('[data-modal = consultation]').removeClass('modal_active');
       $('[data-modal = payment]').removeClass('modal_active');
-        if( $button.hasClass('open') ){
-          $('.header__menu').toggleClass('header__menu_active');
-          $button.removeClass('open');
-          $button.addClass('close');
-          $('body').css({
-            'overflow':'visible'
-          });
-        } else {
-          $('.header__menu').toggleClass('header__menu_active');
-          $button.removeClass('close');
-          $button.addClass('open');
-          $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
-          $('body').css({
-            'overflow':'hidden'
-          });
-        }
-    });
-
-    $('section, footer').on('click', function(){
-      $('.header__menu').removeClass('header__menu_active');
-      $button.removeClass('open');
-      $button.addClass('close');
-      if ($('[data-modal = consultation]').hasClass('modal_active') || $('[data-modal = payment]').hasClass('modal_active')) {
-        $('body').css({
-          'overflow':'hidden'
-        });
-      } else {
+      if( $button.hasClass('open') ){
+        $('.header__menu').toggleClass('header__menu_active');
+        $button.removeClass('open');
+        $button.addClass('close');
         $('body').css({
           'overflow':'visible'
         });
+        $('.header__overlay').removeClass('header__overlay_active');
+      } else {
+        $('.header__menu').toggleClass('header__menu_active');
+        $button.removeClass('close');
+        $button.addClass('open');
+        $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+        $('body').css({
+          'overflow':'hidden'
+        });
+        $('.header__overlay').addClass('header__overlay_active');
       }
+    });
+
+    const headerOverlay = document.querySelector('.header__overlay');
+
+    headerOverlay.addEventListener('click', e => {
+
+        const target = e.target;
+        
+        if (target === headerOverlay) {
+          $('.header__menu').removeClass('header__menu_active');
+          $button.addClass('close');
+          $button.removeClass('open');
+          $('body').css({
+            'overflow':'visible'
+          });
+          $('.header__overlay').removeClass('header__overlay_active');
+        }
+        
     });
 
     //buttons on cards
@@ -140,12 +146,17 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    $('.overlay').on('click', function(){
-      $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
-      $('body').css({
-        'overflow':'visible'
+    $('.overlay').on('click', function(event){
+
+        const target = event.target;
+
+        if ( target.closest('.modal') ) {} else {
+          $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+          $('body').css({
+            'overflow':'visible'
+          });
+        }
       });
-    });
 
     window.onkeydown = function(event) {
       if ( event.keyCode == 27 ) {
