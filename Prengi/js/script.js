@@ -32,117 +32,110 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //hamburger button and header button
 
-    $('.header__close').each(function(i){
-      $(this).on('click', function(e){
-        e.preventDefault();
-        $('.header').eq(i).removeClass('header_active');
-      });
-    });
-
-
     var $button = $('#hamburger');
     menuItem  = document.querySelectorAll('.navigation__link');
     menu      = document.querySelector('.navigation__items');
 
     menuItem.forEach(item => { //clicking on the navigation link
       item.addEventListener('click', () => {
-        menu.classList.toggle('navigation__items_active');
+        menu.classList.remove('navigation__items_active');
         $button.removeClass('open');
         $button.addClass('close');
         $('body').css({
           'overflow':'visible'
         });
+        $('.overlay-navigation').removeClass('overlay-navigation_active');
       });
     });
 
     $button.on('click', function(e){
       e.preventDefault();
       $('[data-modal = acces]').removeClass('modal_active');
-      if( $('.header').hasClass('header_active') ){
-        $('.header').removeClass('header_active')
-        if( $button.hasClass('open') ){
-          $button.removeClass('open');
-          $button.addClass('close');
-          $('.navigation__items').toggleClass('navigation__items_active');
-          $('body').css({
-            'overflow':'visible'
-          });
-        } else {
-          $button.removeClass('close');
-          $button.addClass('open');
-          $('.navigation__items').toggleClass('navigation__items_active');
-          $('body').css({
-            'overflow':'hidden'
-          });
-        }
+      $('.header').removeClass('header_active');
+
+      if( $button.hasClass('open') ){
+        menu.classList.remove('navigation__items_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
+        $('.overlay-navigation').removeClass('overlay-navigation_active');
       } else {
-        if( $button.hasClass('open') ){
-          $button.removeClass('open');
-          $button.addClass('close');
-          $('.navigation__items').toggleClass('navigation__items_active');
-          $('body').css({
-            'overflow':'visible'
-          });
-        } else {
-          $('.overlay, #acces, #thanks').fadeOut('slow');
-          $button.removeClass('close');
-          $button.addClass('open');
-          $('.navigation__items').toggleClass('navigation__items_active');
-          $('body').css({
-            'overflow':'hidden'
-          });
-        }
+        $('.overlay, #acces, #thanks').fadeOut('slow');
+        menu.classList.add('navigation__items_active');
+        $button.addClass('open');
+        $button.removeClass('close');
+        $('body').css({
+          'overflow':'hidden'
+        });
+        $('.overlay-navigation').addClass('overlay-navigation_active');
       }
     });
 
     $('.button_contacts').each(function(i){
       $(this).on('click', function(e){
         e.preventDefault();
-        if( $button.hasClass('open') ){
-          $('.navigation__items').removeClass('navigation__items_active');
-          $('.header').eq(i).addClass('header_active');
-          $button.removeClass('open');
-          $button.addClass('close');
+        $('.header').eq(i).toggleClass('header_active');
+        $('.overlay, #acces, #thanks').fadeOut('slow');
+        menu.classList.remove('navigation__items_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+
+        if( $('.header').hasClass('header_active') ) {
+          $('body').css({
+            'overflow':'hidden'
+          });
+          $('.overlay-header').addClass('overlay-header_active');
+        } else {
           $('body').css({
             'overflow':'visible'
           });
-        } else {
-          $('.header').eq(i).toggleClass('header_active');
-          $('.overlay, #acces, #thanks').fadeOut('slow');
-          if( $('.header').hasClass('header_active') ) {
-            $('body').css({
-              'overflow':'hidden'
-            });
-          } else {
-            $('body').css({
-              'overflow':'visible'
-            });
-          }
+          $('.overlay-header').removeClass('overlay-header_active');
         }
       });
     });
 
     $('.header__close').on('click', function(){
+      $('.header').removeClass('header_active');
       $('body').css({
         'overflow':'visible'
       });
+      $('.overlay-header').removeClass('overlay-header_active');
     });
 
-    $('section, footer').on('click', function(){
-      $('.header').removeClass('header_active');
-      $('.navigation__items').removeClass('navigation__items_active');
-      $button.removeClass('open');
-      $button.addClass('close');
-      if ($('[data-modal = acces]').hasClass('modal_active')) {
-        $('body').css({
-          'overflow':'hidden'
-        });
-      } else {
+    const headerOverlay     = document.querySelector('.overlay-header'),
+          navigationOverlay = document.querySelector('.overlay-navigation');
+
+    headerOverlay.addEventListener('click', e => {
+
+        const target = e.target;
+        
+        if (target === headerOverlay) {
+          $('.header').removeClass('header_active');
+          $('body').css({
+            'overflow':'visible'
+          });
+          $('.overlay-header').removeClass('overlay-header_active');
+        }
+        
+    });
+
+    navigationOverlay.addEventListener('click', e => {
+
+      const target = e.target;
+      
+      if (target === navigationOverlay) {
+        menu.classList.remove('navigation__items_active');
+        $button.removeClass('open');
+        $button.addClass('close');
         $('body').css({
           'overflow':'visible'
         });
+        $('.overlay-navigation').removeClass('overlay-navigation_active');
       }
-    });
+      
+  });
 
     //smooth scroll to up
 
