@@ -264,7 +264,65 @@ window.addEventListener('DOMContentLoaded', () => {
   
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    //hamburger
 
+    var $button = $('#hamburger');
+    menuItem  = document.querySelectorAll('.header__link');
+    menu      = document.querySelector('.header__navigation');
+
+    menuItem.forEach(item => { //clicking on the navigation link
+      item.addEventListener('click', () => {
+        menu.classList.toggle('header__navigation_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
+        $('.header__overlay').removeClass('header__overlay_active');
+      });
+    });
+
+    $button.on('click', function(e){
+      e.preventDefault();
+      $('[data-modal = consultation]').removeClass('modal_active');
+      $('[data-modal = payment]').removeClass('modal_active');
+      if( $button.hasClass('open') ){
+        $('.header__navigation').toggleClass('header__navigation_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
+        $('.header__overlay').removeClass('header__overlay_active');
+      } else {
+        $('.header__navigation').toggleClass('header__navigation_active');
+        $button.removeClass('close');
+        $button.addClass('open');
+        $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
+        $('body').css({
+          'overflow':'hidden'
+        });
+        $('.header__overlay').addClass('header__overlay_active');
+      }
+    });
+
+    const headerOverlay = document.querySelector('.header__overlay');
+
+    headerOverlay.addEventListener('click', e => {
+
+        const target = e.target;
+        
+        if (target === headerOverlay) {
+          $('.header__navigation').removeClass('header__navigation_active');
+          $button.addClass('close');
+          $button.removeClass('open');
+          $('body').css({
+            'overflow':'visible'
+          });
+          $('.header__overlay').removeClass('header__overlay_active');
+        }
+        
+    });
 
     //end JQUERY
 
@@ -411,6 +469,25 @@ window.addEventListener('DOMContentLoaded', () => {
       basketSum.innerHTML = '0 р.';
       modalCartTotalNum.innerHTML = '0 р.';
     });
+
+    //hamburger
+
+    var $button = $('#hamburger');
+    menuItem  = document.querySelectorAll('.header__link');
+    menu      = document.querySelector('.header__navigation');
+
+    menuItem.forEach(item => { //clicking on the navigation link
+      item.addEventListener('click', () => {
+        menu.classList.toggle('header__navigation_active');
+        $button.removeClass('open');
+        $button.addClass('close');
+        $('body').css({
+          'overflow':'visible'
+        });
+        $('.header__overlay').removeClass('header__overlay_active');
+      });
+    });
+
 
 
 });
