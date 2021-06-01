@@ -128,14 +128,6 @@ window.addEventListener('DOMContentLoaded', () => {
         'overflow':'hidden'
       });
     });
-    
-    $('[data-modal = payment]').on('click', function(){
-      $('.overlay, #payment').fadeIn('slow');
-      $('[data-modal = payment]').addClass('modal_active');
-      $('body').css({
-        'overflow':'hidden'
-      });
-    });
   
     $('.modal__close').on('click', function(){
       $('.overlay, #consultation, #thanks, #payment').fadeOut('slow');
