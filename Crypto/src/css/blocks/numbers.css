@@ -1,0 +1,53 @@
+.numbers {
+  min-height: 1200px;
+  background: url("../../img/numbers/background.png") center 0% no-repeat;
+  background-size: cover;
+  padding: 50px 25px;
+}
+
+.numbers__text {
+  font-size: 250px;
+  margin-top: 100px;
+  margin-left: 5%;
+}
+
+.numbers__text_sub {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
+.numbers__text_small {
+  color: #6E647D;
+  font-size: 16px;
+  margin-top: 300px;
+  margin-left: 5%;
+}
+
+.numbers__items {
+  display: flex;
+  justify-content: right;
+}
+
+.numbers__item {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  background: url("../../img/numbers/Rectangle2.svg") center center no-repeat;
+  block-size: cover;
+}
+.numbers__item:first-child {
+  background: url("../../img/numbers/Rectangle.svg") center center no-repeat;
+}
+
+.numbers__item-title {
+  font-size: 80px;
+  margin: 20px 0 0 40px;
+}
+
+.numbers__item-text {
+  width: 40%;
+  text-align: left;
+  font-size: 20px;
+  margin: 100px 0 0 40px;
+}
