@@ -1,0 +1,47 @@
+.exchanges {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.exchanges__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 30px;
+}
+
+.exchanges__item-image {
+  max-width: 80px;
+}
+
+.exchanges__item-image_big {
+  max-width: 130px;
+}
+
+.exchanges__item-soon {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 20px;
+  background-color: #513285;
+  font-size: 14px;
+  font-family: 'Nekst Regular', sans-serif;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.exchanges_use {
+  margin-top: 200px;
+}
+
+.exchanges__item_use {
+  background-color: #493b80;
+}

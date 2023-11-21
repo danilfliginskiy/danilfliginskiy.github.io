@@ -1,0 +1,31 @@
+.button {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: 130px;
+  border-radius: 80px;
+  background-color: #5F29B7;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Nekst Regular', sans-serif;
+  font-weight: 600;
+  margin-top: 150px;
+  cursor: pointer;
+}
+
+.button_try {
+  position: relative;
+  width: 400px;
+  height: 80px;
+  font-size: 26px;
+  z-index: 100;
+}
+
+.button:hover {
+  border: 10px solid #5F29B7;
+  background-color: #000;
+  color: #fff;
+  margin-top: 130px;
+  box-shadow: 0 0 100px #8539ff;
+  transition: 500ms;
+}

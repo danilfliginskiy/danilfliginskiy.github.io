@@ -1,0 +1,23 @@
+.promo {
+  min-height: 800px;
+  width: 100%;
+  padding: 60px 0 120px 0;
+  background: url("../../img/promo/background.png") center 10% no-repeat;
+  background-size: cover;
+}
+
+.promo__text {
+  font-family: 'Nekst Regular', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 170px;
+  margin-left: 5%;
+}
+
+.promo__text_fill {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: #5F29B7;
+}
+

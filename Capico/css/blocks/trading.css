@@ -1,0 +1,13 @@
+.trading {
+  min-height: 1100px;
+  background: url("../../img/trading/background.png") center 0% no-repeat;
+  background-size: cover;
+  padding: 25px;
+}
+
+.trading__text {
+  font-size: 40px;
+  font-weight: normal;
+  width: 30%;
+  margin: 100px 0 0 60px;
+}
