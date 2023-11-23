@@ -17,3 +17,48 @@
   font-weight: 600;
   color: #fff;
 }
+
+@media (max-width: 1490px) {
+
+  .use {
+    min-height: 800px;
+  }
+    
+  .use__descr {
+    margin-top: 100px;
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .use {
+    min-height: 750px;
+    padding-top: 50px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .use {
+    padding-top: 50px;
+  }
+
+  .use__descr {
+    width: 90%;
+    font-size: 24px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .use__descr {
+    width: 100%;
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
+}

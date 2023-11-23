@@ -10,25 +10,37 @@
   <link rel="stylesheet" href="css/main.css">
 
 </head>
-  <body>
+  <body id="body">
   
     <header class="header">
 
-      <div class="header__logo">
-        <img src="img/header/logo.svg" alt="logo">
-      </div>
+    <div class="header__logo">
+      <img src="img/header/logo.svg" alt="logo">
+    </div>
 
-      <nav class="header__nav">
-        <ul class="header__nav-table">
-          <li><a href="index.html" class="header__nav-table-link">Главная</a></li>
-          <li><a href="pricing.html" class="header__nav-table-link">Тарифы</a></li>
-          <li><a href="partners.html" class="header__nav-table-link">Партнеры</a></li>
-        </ul>
-      </nav>
+    <div class="hamburger__nav">
+      <li><a href="index.html" class="hamburger__nav-link">Главная</a></li>
+      <li><a href="pricing.html" class="hamburger__nav-link">Тарифы</a></li>
+      <li><a href="partners.html" class="hamburger__nav-link">Партнеры</a></li>
+    </div>
 
-      <button class="header__button">
-        Войти
-      </button>
+    <nav class="header__nav">
+      <ul class="header__nav-table">
+        <li><a href="index.html" class="header__nav-table-link">Главная</a></li>
+        <li><a href="pricing.html" class="header__nav-table-link">Тарифы</a></li>
+        <li><a href="partners.html" class="header__nav-table-link">Партнеры</a></li>
+      </ul>
+    </nav>
+
+    <button class="header__button">
+      Войти
+    </button>
+
+    <div class="hamburger">
+      <span class="line" id="firstLine"></span>
+      <span class="line " id="secondLine"></span>
+      <span class="line " id="thirtyLine"></span>
+    </div>
 
     </header>
 
@@ -160,43 +172,42 @@
 
     <footer class="footer">
 
-      <img src="img/footer/logo.svg" alt="logo" class="footer__logo">
-      <div class="text footer__copyright">© 2022 Capico ltd.</div>
+    <img src="img/footer/logo.svg" alt="logo" class="footer__logo">
+    <div class="text footer__copyright">© 2022 Capico ltd.</div>
 
-      <div class="footer__items">
+    <div class="footer__items">
 
-        <div class="footer__item">
-        <h4 class="text footer__item-title">Документы</h4>
+      <div class="footer__item">
+      <h4 class="text footer__item-title">Документы</h4>
 
-        <ul>
-          <li><a href="#" class="text footer__item-link">Пользовательское соглашение</a></li>
-          <li><a href="#" class="text footer__item-link">Политика конфиденциальности</a></li>
-          <li><a href="#" class="text footer__item-link">Реферальное соглашение</a></li>
-        </ul>
-        </div>
-
-        <div class="footer__item">
-          <h4 class="text footer__item-title">Платформа</h4>
-
-          <ul>
-            <li><a href="#" class="text footer__item-link">Функции</a></li>
-            <li><a href="#" class="text footer__item-link">Тарифы</a></li>
-            <li><a href="#" class="text footer__item-link">Партнеры</a></li>
-            <li><a href="#" class="text footer__item-link">Академия</a></li>
-            <li><a href="#" class="text footer__item-link">База знаний</a></li>
-            <li><a href="#" class="text footer__item-link">Популярные вопросы</a></li>
-            <li><a href="#" class="text footer__item-link">Вакансии</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__item">
-          <button class="footer__item-button">Войти</button>
-          <button class="footer__item-button">Регистрация</button>
-        </div>
-
+      <ul>
+        <li><a href="#" class="text footer__item-link">Пользовательское соглашение</a></li>
+        <li><a href="#" class="text footer__item-link">Политика конфиденциальности</a></li>
+        <li><a href="#" class="text footer__item-link">Реферальное соглашение</a></li>
+      </ul>
       </div>
 
+      <div class="footer__item">
+        <h4 class="text footer__item-title">Платформа</h4>
+
+        <ul>
+          <li><a href="index.html" class="text footer__item-link">Главная</a></li>
+          <li><a href="pricing.html" class="text footer__item-link">Тарифы</a></li>
+          <li><a href="partners.html" class="text footer__item-link">Партнеры</a></li>
+          <li><a href="#functions" class="text footer__item-link">Функции</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__item">
+        <button class="footer__item-button">Войти</button>
+        <button class="footer__item-button">Регистрация</button>
+      </div>
+
+    </div>
+
     </footer>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

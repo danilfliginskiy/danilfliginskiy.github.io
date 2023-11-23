@@ -6,8 +6,62 @@
 }
 
 .trading__text {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: normal;
   width: 30%;
   margin: 100px 0 0 60px;
+}
+
+@media (max-width: 1490px) {
+
+  .trading {
+    min-height: 800px;
+  }
+    
+  .trading__text {
+    font-size: 26px;
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .trading__text {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .trading {
+    min-height: 650px;
+  }
+
+  .trading .header_block {
+    display: none;
+  }
+
+  .trading__text {
+    width: 80%;
+    margin: 60px auto 0 auto;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .trading {
+    min-height: 500px;
+  }
+
+  .trading__text {
+    width: 80%;
+    font-size: 16px;
+    text-align: justify;
+  }
+
 }

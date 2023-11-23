@@ -21,3 +21,54 @@
   background-color: #5F29B7;
 }
 
+@media (max-width: 1490px) {
+
+  .promo {
+    min-height: 700px;
+    background: url("../../img/promo/background.png") center 0% no-repeat;
+    padding-bottom: 60px;
+  }
+
+  .promo__text {
+    margin-top: 100px;
+  }
+    
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 768px) {
+
+  .promo {
+    position: relative;
+    min-height: 500px;
+    padding-top: 20px;
+    background: url("../../img/promo/background.png") center 30% no-repeat;
+    z-index: 10;
+  }
+
+  .promo__text {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .promo {
+    background: url("../../img/promo/mobile-background.png") center -15% no-repeat,
+                #000 center 100% no-repeat;
+    background-size: contain;
+    padding-top: 90%;
+    padding-bottom: 20px;
+  }
+
+  .promo__text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+}

@@ -2,5 +2,34 @@
   min-height: 800px;
   background: url("../../img/free/background.png") center 100% no-repeat;
   background-size: cover;
-  padding: 200px 0 100px 0;
+  padding: 50px 0 100px 0;
+}
+
+@media (max-width: 1490px) {
+    
+  
+
+}
+
+@media (max-width: 1200px) {
+
+  .free {
+    padding-bottom: 0;
+    min-height: 500px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .free {
+    min-height: 400px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+
+
 }

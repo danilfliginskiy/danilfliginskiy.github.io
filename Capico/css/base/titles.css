@@ -4,7 +4,7 @@
 }
 
 .title {
-  min-width: 800px;
+  min-width: 400px;
   font-family: 'Nekst Light', sans-serif;
   font-weight: 100;
   font-size: 64px;
@@ -33,19 +33,20 @@
 }
 
 .title_focus {
-  font-size: 110px;
+  font-size: 80px;
   background-image: linear-gradient(to left, #7a44d2, #FFFFFF );
 }
 
 .title_features {
-  font-size: 80px;
-  max-width: 50%;
+  font-size: 70px;
+  max-width: 60%;
   background-image: linear-gradient(to left, #7a44d2, #FFFFFF );
   font-weight: 600;
+  margin-left: 10%;
 }
 
 .title_trading {
-  font-size: 120px;
+  font-size: 90px;
   font-weight: 600;
   background-image: linear-gradient(to left, #7a44d2, #FFFFFF );
   margin: 0 50px;
@@ -55,7 +56,7 @@
   width: 60%;
   margin: 0 auto;
   text-align: center;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 600;
   margin-bottom: 400px;
 }
@@ -84,4 +85,193 @@
   font-weight: 600;
   margin: 0px;
   color: #fff;
+}
+
+@media (max-width: 1490px) {
+
+  .title {
+    min-width: 400px;
+  }
+
+  .title_promo {
+    margin-top: 0;
+    font-size: 70px;
+  }
+
+  .title_control {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 45px;
+  }
+
+  .title_focus {
+    font-size: 62px;
+  }
+
+  .title_features {
+    font-size: 50px;
+    margin-left: 100px;
+  }
+
+  .title_trading {
+    font-size: 80px;
+  }
+
+  .title_free {
+    font-size: 70px;
+  }
+
+  .title_join {
+    font-size: 90px;
+  }
+
+  .title_try {
+    font-size: 50px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .title_promo {
+    font-size: 50px;
+    width: 80%;
+  }
+
+  .title_strong {
+    font-size: 70px;
+  }
+
+  .title {
+    min-width: 200px;
+  }
+
+  .title_control {
+    font-size: 30px;
+  }
+
+  .title_focus {
+    font-size: 48px;
+  }
+
+  .title_features {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .title_trading {
+    font-size: 70px;
+  }
+
+  .title_free {
+    width: 70%;
+    font-size: 50px;
+    margin-bottom: 100px;
+  }
+
+  .subtitle {
+    position: relative;
+    z-index: 10;
+  }
+
+  .title_join {
+    font-size: 64px;
+  }
+
+  .title_try {
+    width: 90%;
+    font-size: 35px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    max-width: 80%;
+  }
+
+  .title_promo {
+    font-size: 35px;
+    width: 95%;
+  }
+
+  .title_strong {
+    font-size: 50px;
+  }
+
+  .title_control {
+    font-size: 26px;
+  }
+
+  .title_trading {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .title_free {
+    width: 90%;
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .title_join {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .title_promo {
+    font-size: 30px;
+  }
+
+  .title_strong {
+    font-size: 48px;
+  }
+
+  .title_control {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .title_focus {
+    font-size: 32px;
+  }
+
+  .title_features {
+    font-size: 32px;
+  }
+
+  .title_trading {
+    font-size: 30px;
+    margin: 0 auto;
+  }
+
+  .title_free {
+    font-size: 26px;
+  }
+
+  .title_join {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .title_try {
+    font-size: 24px;
+  }
+
 }

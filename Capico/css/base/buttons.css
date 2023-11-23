@@ -2,11 +2,11 @@
   display: block;
   margin: 0 auto;
   width: 40%;
-  height: 130px;
+  height: 110px;
   border-radius: 80px;
   background-color: #5F29B7;
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Nekst Regular', sans-serif;
   font-weight: 600;
   margin-top: 150px;
@@ -28,4 +28,46 @@
   margin-top: 130px;
   box-shadow: 0 0 100px #8539ff;
   transition: 500ms;
+}
+
+@media (max-width: 1490px) {
+    
+  .button {
+    font-size: 26px;
+    height: 90px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .button {
+    font-size: 20px;
+    height: 70px;
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .button {
+    font-size: 16px;
+    height: 60px;
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .button {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .button_try {
+    margin-top: 100px;
+  }
+
 }

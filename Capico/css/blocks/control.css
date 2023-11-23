@@ -10,3 +10,52 @@
   width: 60%;
   margin: 0 auto;
 }
+
+@media (max-width: 1490px) {
+    
+  .control__image {
+    margin: 50px auto 0 auto;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .control {
+    min-height: 500px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .control__image {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .control {
+    padding-top: 40px;
+    overflow: hidden;
+  }
+
+  .control__image {
+    width: 150%;
+    left: 65%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .control__image {
+    width: 200%;
+  }
+
+}

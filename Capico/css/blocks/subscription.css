@@ -23,11 +23,11 @@
 
 .subscription__item {
   position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 30px;
   background-color: #5B419E;
-  padding: 40px;
+  padding: 20px;
 }
 
 .subscription__item:last-child {
@@ -41,7 +41,7 @@
 
 .subscription__item-title {
   text-align: left;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -54,25 +54,25 @@
 
 .subscription__item-price {
   text-align: center;
-  font-size: 90px;
+  font-size: 80px;
 }
 
 .subscription__item-min {
   text-align: center;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .subscription__item-economy {
   position: absolute;
-  left: 40px;
-  bottom: 40px;
+  left: 20px;
+  bottom: 25px;
   font-size: 18px;
 }
 
 .subscription__item-percent {
   position: absolute;
-  right: 40px;
-  bottom: 40px;
+  right: 20px;
+  bottom: 20px;
   font-size: 20px;
   background-color: #8201EA;
   border-radius: 30px;
@@ -83,4 +83,83 @@
 .subscription__descr {
   font-size: 40px;
   margin: 70px 0 0 50px;
+}
+
+@media (max-width: 1490px) {
+    
+  .subscription__item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .subscription__item-price {
+    font-size: 60px;
+  }
+
+  .subscription__item-title {
+    font-size: 20px;
+  }
+
+  .subscription__item-economy {
+    font-size: 16px;
+  }
+
+  .subscription__item-percent {
+    font-size: 16px;
+  }
+
+  .subscription__descr {
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .subscription__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscription__item {
+    width: 35%;
+    height: 250px;
+    margin: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .subscription__items {
+    margin-top: 30px;
+  }
+
+  .subscription__item {
+    width: 100%;
+    height: 200px;
+  }
+
+  .subscription__descr {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .wrap {
+    padding-bottom: 50px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .subscription__descr {
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .wrap {
+    border-radius: 30px;
+  }
+
 }

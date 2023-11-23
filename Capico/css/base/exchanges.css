@@ -45,3 +45,73 @@
 .exchanges__item_use {
   background-color: #493b80;
 }
+
+@media (max-width: 1490px) {
+  .exchanges__item {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .exchanges {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .exchanges__item {
+    width: 180px;
+    height: 80px;
+    margin: 20px;
+  }
+
+  .exchanges__item-image {
+    max-width: 70px;
+  }
+
+  .exchanges__item-image_big {
+    max-width: 90px;
+  }
+
+  .exchanges_use {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .exchanges__item {
+    width: 175px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  .exchanges__item_none {
+    display: none;
+  }
+
+  .exchanges__item-image {
+    max-width: 60px;
+  }
+
+  .exchanges__item-image_big {
+    max-width: 85px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .exchanges {
+    margin-top: 25px;
+  }
+
+  .exchanges__item {
+    width: 80%;
+    border: #7b7b7b 1px solid;
+  }
+
+}

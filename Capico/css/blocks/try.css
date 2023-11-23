@@ -3,3 +3,30 @@
   background: url("../../img/free/background.png") 0% 55% no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 1490px) {
+
+  .try {
+    min-height: 500px;
+    padding-top: 150px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .try {
+    min-height: 400px;
+    padding-top: 200px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .try {
+    min-height: 300px;
+    padding-top: 100px;
+  }
+
+}
