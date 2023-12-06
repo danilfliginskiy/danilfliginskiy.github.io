@@ -1,0 +1,47 @@
+.about {
+  height: 780px;
+  background: url("../../img/about/background.png") center center/cover no-repeat;
+  padding: 150px 0 50px 0;
+}
+
+.about__circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: -3%;
+  right: 18%;
+  z-index: 10;
+  background: url("../../img/about/Ellipse37.png") center center/cover no-repeat;
+}
+
+.about__ellipse {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -5%;
+  left: -5%;
+  z-index: 10;
+  background: url("../../img/about/Ellipse36.png") center center/cover no-repeat;
+}
+
+@media (max-width: 1199px) {
+
+  .about__circle, .about__ellipse {
+    display: none;
+  }
+  
+  .about {
+    background: #fff;
+    padding-top: 50px;
+  }
+
+}
+
+@media (max-width: 991px) {
+  
+  .about {
+    height: 750px;
+    padding-top: 150px;
+  }
+
+}

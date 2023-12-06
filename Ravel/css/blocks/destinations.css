@@ -1,0 +1,155 @@
+.destinations {
+  position: relative;
+  height: 450px;
+}
+
+.destinations__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.destinations .container {
+  display: flex;
+}
+
+.destinations__wrap {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.destinations__items {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.destinations__item {
+  position: relative;
+  width: 250px;
+  height: 330px;
+}
+
+.destinations__item:nth-child(1) {
+  background: url("../../img/destinations/overlay.png")center center/cover no-repeat,
+  url("../../img/destinations/cuba-city.jpg") center center/cover no-repeat;
+}
+
+.destinations__item:nth-child(2) {
+  background: url("../../img/destinations/overlay.png") center center/cover no-repeat,
+  url("../../img/destinations/paris-city.jpg") center center/cover no-repeat;
+}
+
+.destinations__item:nth-child(3) {
+  background: url("../../img/destinations/overlay.png") center center/cover no-repeat,
+  url("../../img/destinations/japan.jpg") center center/cover no-repeat;
+}
+
+.destinations__item-title {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 1399px) {
+  
+  .destinations__img {
+    width: 40%;
+    height: 100%;
+    top: -15%;
+  }
+
+  .destinations__item {
+    width: 30%;
+  }
+  
+}
+
+@media (max-width: 1199px) {
+  
+  .destinations__item-title {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 991px) {
+  
+  .destinations {
+    height: 600px;
+  }
+
+  .destinations .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .destinations__wrap {
+    width: 80%;
+  }
+
+  .destinations__img {
+    height: 70%;
+    top: 25%;
+  }
+
+  .destinations__item-title {
+    font-size: 18px;
+  }
+
+  .destinations__items {
+    margin-top: 50px;
+    width: 90%;
+    height: 300px;
+  }
+
+  .destinations__item {
+    width: 30%;
+    height: 100%;
+  }
+
+}
+
+@media (max-width: 481px) {
+
+  .destinations {
+    height: 1300px;
+  }
+
+  .destinations__items {
+    flex-wrap: wrap;
+  }
+
+  .destinations__item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .destinations__item-title {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .destinations__item:nth-child(1) {
+    background: url("../../img/destinations/overlay.png")center center/contain no-repeat,
+    url("../../img/destinations/cuba-city.jpg") center center/contain no-repeat;
+  }
+
+  .destinations__item:nth-child(2) {
+    background: url("../../img/destinations/overlay.png") center center/contain no-repeat,
+    url("../../img/destinations/paris-city.jpg") center center/contain no-repeat;
+  }
+
+  .destinations__item:nth-child(3) {
+    background: url("../../img/destinations/overlay.png") center center/contain no-repeat,
+    url("../../img/destinations/japan.jpg") center center/contain no-repeat;
+  }
+
+}

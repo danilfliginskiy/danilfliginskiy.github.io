@@ -1,0 +1,50 @@
+.promo {
+  width: 100%;
+  height: 900px;
+}
+
+.promo .container {
+  position: relative;
+}
+
+@media (max-width: 1399px) {
+  
+  .promo {
+    height: 700px;
+  }
+
+}
+
+@media (max-width: 1199px) {
+  
+  .promo {
+    height: 600px;
+  }
+
+}
+
+@media (max-width: 991px) {
+  
+  
+
+}
+
+@media (max-width: 767px) {
+  
+  .promo {
+    height: 550px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  
+  
+
+}
+
+@media (max-width: 481px) {
+
+
+
+}

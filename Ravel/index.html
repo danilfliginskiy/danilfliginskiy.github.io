@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravel</title>
+
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body id="body">
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrap">
+
+        <div class="header__logo">
+          <img src="img/header/logo.svg" alt="logo">
+        </div>
+        
+        <nav class="header__nav">
+          <ul class="header__nav-table">
+            <li><a href="#destinations" class="header__nav-table-link">Путёвки</a></li>
+            <li><a href="#" class="header__nav-table-link">Предложения</a></li>
+            <li><a href="#" class="header__nav-table-link">Туры</a></li>
+            <li><a href="#" class="header__nav-table-link">Блог</a></li>
+          </ul>
+        </nav>
+
+        <button class="header__button">
+          <img src="img/header/user.svg" alt="user" class="header__button-img">
+          <a href="#" class="header__button-link">Войти</a>
+        </button>
+
+        <div class="hamburger">
+          <span class="line" id="firstLine"></span>
+          <span class="line " id="secondLine"></span>
+          <span class="line " id="thirtyLine"></span>
+        </div>
+
+      </div>
+
+      <div class="hamburger__nav">
+        <li><a href="#" class="hamburger__nav-link">Путёвки</a></li>
+        <li><a href="#" class="hamburger__nav-link">Предложения</a></li>
+        <li><a href="#" class="hamburger__nav-link">Туры</a></li>
+        <li><a href="#" class="hamburger__nav-link">Блог</a></li>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="promo">
+    <div class="container">
+
+      <h1 class="title title_main">Пришло Время Исследовать Мир</h1>
+      <button class="button button_promo">План Поездки</button>
+
+      <div class="carousel">
+            
+        <div class="carousel__item">
+            <div class="carousel__img carousel__img-1"></div>
+        </div>
+
+        <div class="carousel__item">
+            <div class="carousel__img carousel__img-2"></div>
+        </div>
+
+        <div class="carousel__item">
+            <div class="carousel__img carousel__img-3"></div>
+        </div>
+
+        <div class="carousel__item">
+            <div class="carousel__img carousel__img-4"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="advantages">
+    <div class="container">
+      <div class="advantages__items">
+
+        <div class="advantages__item">
+          <img src="img/advantages/icon1.svg" alt="icon-1" class="advantages__item-img">
+          <span class="advantages__item-title">Выберите Цель</span>
+          <span class="advantages__item-descr">Выберите Место, Которое Всегда Хотели Посетить</span>
+        </div>
+
+        <div class="advantages__item">
+          <img src="img/advantages/icon2.svg" alt="icon-2" class="advantages__item-img">
+          <span class="advantages__item-title">Исследуйте Место</span>
+          <span class="advantages__item-descr">Исследуйте Каждый Уголок И Станьте Первооткрывателем</span>
+        </div>
+
+        <div class="advantages__item">
+          <img src="img/advantages/icon3.svg" alt="icon-3" class="advantages__item-img">
+          <span class="advantages__item-title">Начните Путешествие</span>
+          <span class="advantages__item-descr">Возьмите Рюкзак И Приготовьтесь К Путешествию</span>
+        </div>
+        
+        <div class="advantages__item">
+          <img src="img/advantages/icon4.svg" alt="icon-4" class="advantages__item-img">
+          <span class="advantages__item-title">Веселитесь</span>
+          <span class="advantages__item-descr">Занимайтесь Тем, Что Принесёт Вам Удовольствие</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="destinations" id="destinations">
+    <div class="container">
+
+      <div class="destinations__wrap">
+        <h2 class="title">Лучшие <span>Путёвки</span> В Мире</h2>
+        <p class="descr destinations__descr">Ознакомьтесь с предложенными вариантами путешествий и выберите путёвку мечты</p>
+        <button class="button">Узнать Больше</button>
+      </div>
+
+      <div class="destinations__items">
+        <div class="destinations__item">
+          <span class="destinations__item-title">Куба Сити</span>
+        </div>
+        <div class="destinations__item">
+          <span class="destinations__item-title">Париж</span>
+        </div>
+        <div class="destinations__item">
+          <span class="destinations__item-title">Токио</span>
+        </div>
+      </div>
+
+      <img src="img/destinations/quadre.jpg" alt="quadro" class="destinations__img">
+
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <img src="img/header/logo.svg" alt="logo" class="footer__logo">
+    <div class="footer__copyright">Copyright @2020 Ravel.</div>
+
+    <div class="footer__items">
+
+      <div class="footer__item">
+      <h4 class="footer__item-title">Ссылки</h4>
+
+      <ul>
+        <li><a href="#" class="footer__item-link">О Нас</a></li>
+        <li><a href="#destinations" class="footer__item-link">Путевки</a></li>
+        <li><a href="#" class="footer__item-link">Последний Блог</a></li>
+        <li><a href="#" class="footer__item-link">Наша Команда</a></li>
+        <li><a href="#" class="footer__item-link">Связь С Нами</a></li>
+      </ul>
+      </div>
+
+      <div class="footer__item">
+        <h4 class="footer__item-title">Помощь</h4>
+
+        <ul>
+          <li><a href="#" class="footer__item-link">Конфиденциальность</a></li>
+          <li><a href="#" class="footer__item-link">Форум</a></li>
+          <li><a href="#" class="footer__item-link">Гайд По Туру</a></li>
+          <li><a href="#" class="footer__item-link">Условия</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+.choose {
+  position: relative;
+  height: 1100px;
+  padding: 150px 0;
+  overflow: hidden;
+}
+
+.choose__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.choose__item {
+  position: relative;
+  width: 32%;
+  height: 500px;
+  z-index: 100;
+}
+
+.choose__item_texas {
+  background: url("../../img/choose/texas.jpg") center center/cover no-repeat;
+}
+
+.choose__item_santorini {
+  background: url("../../img/choose/santorini.jpg") center center/cover no-repeat;
+}
+
+.choose__item_tokyo {
+  background: url("../../img/choose/tokyo.jpg") center center/cover no-repeat;
+}
+
+.choose__item:nth-child(2) {
+  margin-bottom: 350px;
+}
+
+.choose__item-wrap {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100px;
+  width: 360px;
+  background-color: #fff;
+  bottom: -50px;
+  right: 0;
+  -webkit-box-shadow: 0px 0px 17px 7px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 17px 7px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 17px 7px rgba(34, 60, 80, 0.2);
+  padding: 20px;
+}
+
+.choose__item-wrap-title {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.choose__item-wrap-price {
+  width: 25%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF715B;
+}
+
+.choose__item-wrap-stars {
+  width: 25%;
+  font-size: 16px;
+  color: #FFC01E;
+}
+
+.choose__item-wrap-reviews {
+  width: 30%;
+  font-size: 16px;
+  color: #A79997;
+  font-weight: 400;
+}
+
+.choose__item-add {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  background-color: #FF715B;
+  cursor: pointer;
+}
+
+.choose__item-add-plus {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.choose__ellipse {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -10%;
+  top: -7%;
+  background: url("../../img/choose/Ellipse.png") center center/contain no-repeat;
+  z-index: 0;
+}
+
+.choose__circle {
+  background: url("../../img/choose/circle.svg") center center/contain no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  right: -41%;
+  z-index: 0;
+}
+
+.choose__triangle {
+  background: url("../../img/choose/triangle.svg") center center/contain no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: -41%;
+  z-index: 0;
+}
+
+@media (max-width: 1399px) {
+  
+  .choose__circle {
+    right: -165px;
+  }
+
+  .choose__triangle {
+    left: -170px;
+  }
+
+  .choose__item-wrap {
+    width: 320px;
+    height: 80px;
+    bottom: -40px;
+  }
+
+  .choose__item-wrap-title {
+    font-size: 18px;
+  }
+
+  .choose__item-wrap-price {
+    width: 20%;
+  }
+
+  .choose__item-wrap-reviews {
+    width: 35%;
+    font-size: 14px;
+  }
+
+  .choose__item-wrap-stars {
+    font-size: 14px;
+    width: 25%;
+  }
+  
+}
+
+@media (max-width: 1199px) {
+  
+  .choose {
+    padding: 30px 0 50px 0;
+  }
+
+}
+
+@media (max-width: 991px) {
+  
+  .choose {
+    height: 1100px;
+    overflow: hidden;
+  }
+
+  .choose__ellipse {
+    top: -8%;
+    right: -25%;
+  }
+  
+  .choose__circle, .choose__triangle {
+    display: none;
+  }
+
+  .choose__items {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .choose__item {
+    height: 400px;
+    width: 40%;
+    margin: 20px 20px 40px 20px;
+  }
+
+  .choose__item:nth-child(2) {
+    margin-bottom: 40px;
+  }
+
+  .choose__item-wrap {
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  
+  .choose__item-wrap-title {
+    font-size: 14px;
+  }
+
+  .choose__item-wrap-reviews {
+    display: none;
+  }
+
+  .choose__item-wrap-price {
+    width: 35%;
+  }
+
+  .choose__item-wrap-stars {
+    width: 35%;
+  }
+
+  .choose__item-add {
+    width: 35px;
+    height: 35px;
+  }
+
+  .choose__item-add-plus {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  
+  .choose__item {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .choose__item:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  .choose__item-wrap {
+    height: 60px;
+  }
+
+  .choose__item-price {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 481px) {
+
+  .choose {
+    height: 1500px;
+  }
+
+  .choose__item {
+    width: 90%;
+  }
+
+  .choose__ellipse {
+    right: -70%;
+    top: -5%;
+  }
+
+}
