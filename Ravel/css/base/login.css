@@ -1,8 +1,16 @@
-.login {
+.login, .signup {
   height: 100vh;
 }
 
 .login .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.signup .container {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -55,6 +63,15 @@
   margin-left: 10%;
 }
 
+.home__link {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home__link-link {
+  text-decoration: none;
+}
+
 @media (max-width: 991px) {
 
   .login__form {
@@ -64,19 +81,13 @@
 }
 
 @media (max-width: 767px) {
-  
-  
 
-}
+  .login__form {
+    width: 90%;
+  }
 
-@media (max-width: 575px) {
-  
-  
-
-}
-
-@media (max-width: 481px) {
-
-  
+  .login__form-input {
+    width: 90%;
+  }
 
 }
