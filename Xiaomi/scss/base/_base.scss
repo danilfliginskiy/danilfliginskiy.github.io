@@ -1,0 +1,16 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $page-bg-dark;
+	color: $light-color;
+  font-family: $font-title;
+
+	overflow-x: hidden;
+}
+
+button:hover {
+	transform: scale(1.1);
+	transition: all 0.5s ease;
+}

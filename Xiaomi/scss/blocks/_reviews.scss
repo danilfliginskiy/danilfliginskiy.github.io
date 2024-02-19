@@ -1,0 +1,62 @@
+.reviews {
+  position: relative;
+  min-height: 700px;
+  padding: 150px 0;
+  z-index: 100;
+  &__ellipse {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    height: 200%;
+    width: 112%;
+    background: url("../../img/reviews/Ellipse.png") center center/cover no-repeat;
+    z-index: -10;
+  }
+  &__path {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    background: url("../../img/reviews/Path.png") center center/cover no-repeat;
+    z-index: -1;
+  }
+}
+
+@media (max-width: $laptop-size) {
+  .reviews {
+    &__ellipse {
+      width: 120%;
+      right: -40%;
+      height: 100%;
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: $wide-mobile-size) {
+  .reviews {
+    &__path {
+      width: 150px;
+      height: 100px;
+      top: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .reviews {
+    min-height: 650px;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile-size) {
+  .reviews {
+    min-height: 600px;
+    padding-top: 100px;
+    &__ellipse {
+      width: 150%;
+    }
+  }
+}

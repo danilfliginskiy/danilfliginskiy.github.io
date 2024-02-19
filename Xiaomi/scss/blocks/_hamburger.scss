@@ -1,0 +1,82 @@
+.hamburger {
+  display: none;
+  &__nav {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .hamburger {
+    display: block;
+    margin: auto 5% auto 0;
+    height: 55px;
+    width: 55px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100%;
+    &__nav {
+      position: absolute;
+      height: 100vh;
+      width: 50%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateX(-150%);
+      transition: transform 0.5s ease-in-out;
+      text-align: center;
+      background-color: $page-bg-light;
+      list-style: none;
+      opacity: 0.95;
+      z-index: 1000;
+    }
+    &__nav-link {
+      font-size: 20px;
+      line-height: 50px;
+      font-weight: 600;
+      color: $accent-color;
+      text-decoration: none;
+    }
+    .line {
+      display: block;
+      height: 3px;
+      width: 40%;
+      border-radius: 10px;
+      background: $dark-color;
+      margin: 2px 0;
+    }
+    .firstLine {
+      transform: translateY(220%) rotate(45deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .secondLine {
+      transform: scaleY(0);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .thirtyLine {
+      transform: translateY(-220%) rotate(-45deg);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+
+  .showMenu {
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+
+}
+
+@media (max-width: $mobile-size) {
+  .hamburger {
+    &__nav {
+      width: 70%;
+    }
+  }
+}

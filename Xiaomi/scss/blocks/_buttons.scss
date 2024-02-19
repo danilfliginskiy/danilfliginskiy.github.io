@@ -1,0 +1,93 @@
+.button {
+  width: 120px;
+  height: 55px;
+  background-color: $light-color;
+  border-radius: 30px;
+  color: $dark-color;
+  font-weight: 700;
+  &_reviews {
+    width: 190px;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+  &_questions {
+    width: 190px;
+    font-size: 16px;
+    margin-top: 60px;
+  }
+  &_buy {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    width: 125px;
+    background-color: $accent-color;
+    color: $light-color;
+  }
+}
+
+@media (max-width: $laptop-size) {
+  .button {
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
+    &_reviews {
+      width: 150px;
+      height: 50px;
+      margin-top: -10px;
+    }
+    &_questions {
+      width: 150px;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .button {
+    display: none;
+    &_reviews {
+      display: block;
+    }
+    &_questions {
+      display: block;
+    }
+    &_buy {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $wide-mobile-size) {
+  .button {
+    &_reviews {
+      height: 45px;
+    }
+    &_questions {
+      height: 45px;
+      margin-top: 30px;
+    }
+    &_buy {
+      height: 45px;
+      bottom: 40px;
+      left: 40px;
+    }
+  }
+}
+
+@media (max-width: $mobile-size) {
+  .button {
+    &_reviews {
+      width: 90%;
+      margin: 30px auto 0 auto;
+    }
+    &_questions {
+      width: 90%;
+      margin: 30px auto 0 auto;
+    }
+    &_buy {
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

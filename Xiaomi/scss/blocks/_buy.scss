@@ -1,0 +1,134 @@
+.buy {
+  position: relative;
+  min-height: 600px;
+  padding-top: 50px;
+  z-index: 200;
+  &__wrap {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    border-radius: 30px;
+    background: url("../../img/buy/ellipse.png") center center/150% no-repeat,
+                      $dark-color;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &-price {
+      font-size: clamp(1.125rem, 0.911rem + 1.07vw, 1.875rem);
+      font-weight: 600;
+      color: $accent-color;
+      line-height: 60px;
+    }
+  }
+  &__set {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 50px;
+    &-item {
+      font-size: 14px;
+      line-height: 30px;
+      font-family: $font-item-descr;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: $laptop-size) {
+  .buy {
+    min-height: 500px;
+    &__wrap {
+      min-height: 500px;
+    }
+    &__set {
+      display: none;
+    }
+    &__img {
+      width: 80%;
+      right: -15%;
+      top: -15%;
+    }
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .buy {
+    min-height: 400px;
+    &__wrap {
+      min-height: 400px;
+    }
+    &__img {
+      width: 80%;
+      right: -25%;
+      top: -15%;
+    }
+  }
+}
+
+@media (max-width: $wide-mobile-size) {
+  .buy {
+    min-height: 350px;
+    &__wrap {
+      min-height: 350px;
+      padding: 40px;
+    }
+    &__img {
+      width: 100%;
+      right: -40%;
+    }
+  }
+}
+
+
+@media (max-width: $mobile-size) {
+  .buy {
+    min-height: 700px;
+    &__content {
+      width: 100%;
+    }
+    &__wrap {
+      min-height: 700px;
+      padding: 40px;
+      .title_white {
+        width: 60%;
+      }
+    }
+    &__img {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 35%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .buy {
+    min-height: 700px;
+    &__wrap {
+      min-height: 700px;
+    }
+    &__img {
+      top: 40%;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .buy {
+    min-height: 600px;
+    &__wrap {
+      min-height: 600px;
+    }
+  }
+}

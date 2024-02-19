@@ -1,0 +1,78 @@
+.speed {
+  position: relative;
+  min-height: 600px;
+  padding: clamp(1.25rem, -0.179rem + 7.14vw, 6.25rem);
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../img/speed/background.jpg") center center/cover no-repeat;
+  }
+  &__path {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: clamp(20rem, 7.857rem + 60.71vw, 62.5rem);
+    height: clamp(6.25rem, 2.5rem + 18.75vw, 19.375rem);
+    background: url("../../img/speed/Path.png") center center/cover no-repeat;
+    z-index: -1;
+  }
+  &__wrap {
+    position: relative;
+    height: 370px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    z-index: 10000;
+  }
+  &__text {
+    &-descr {
+      display: block;
+      width: 70%;
+      font-size: clamp(0.75rem, 0.714rem + 0.18vw, 0.875rem);
+      color: $light-color;
+      margin-top: 20px;
+    }
+  }
+  &__veniet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../img/speed/veniet.png") center center/cover no-repeat;
+    z-index: 10;
+  }
+}
+
+@media (max-width: $laptop-size) {
+  .speed {
+    min-height: 400px;
+    &__wrap {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: $tablet-size) {
+  .speed {
+    &__wrap {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: $mobile-size) {
+  .speed {
+    min-height: 430px;
+    &__wrap {
+      width: 100%;
+    }
+    &__background {
+      background: url("../../img/speed/background.jpg") 55% center/cover no-repeat;
+    }
+  }
+}
