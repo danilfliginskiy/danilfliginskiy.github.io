@@ -1,0 +1,16 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<rect id="Property 1=Outline, Property 2=arrow-ios-left" width="24.000000" height="24.000000" transform="matrix(-1 0 0 1 24 0)" fill="#FFFFFF" fill-opacity="0"/>
+	<path id="Mask" d="M10.1714 19C10.4634 19 10.7533 18.8729 10.9513 18.627L15.7793 12.627C16.0774 12.256 16.0734 11.726 15.7683 11.36L10.7683 5.35999C10.4153 4.93604 9.7843 4.87903 9.35938 5.23193C8.9353 5.58496 8.8783 6.21594 9.2323 6.64001L13.7074 12.011L9.39233 17.3729C9.04639 17.803 9.11438 18.433 9.54529 18.7789C9.72937 18.928 9.95129 19 10.1714 19Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<mask id="mask10_74" mask-type="alpha" maskUnits="userSpaceOnUse" x="9.000000" y="5.000488" width="6.999980" height="13.999496">
+		<path id="Mask" d="M10.1714 19C10.4634 19 10.7533 18.8729 10.9513 18.627L15.7793 12.627C16.0774 12.256 16.0734 11.726 15.7683 11.36L10.7683 5.35999C10.4153 4.93604 9.7843 4.87903 9.35938 5.23193C8.9353 5.58496 8.8783 6.21594 9.2323 6.64001L13.7074 12.011L9.39233 17.3729C9.04639 17.803 9.11438 18.433 9.54529 18.7789C9.72937 18.928 9.95129 19 10.1714 19Z" fill="#231F20" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</mask>
+	<g mask="url(#mask10_74)">
+		<rect id="🎨 Color" width="24.000000" height="24.000000" transform="matrix(-1 0 0 1 24 0)" fill="#FFFFFF" fill-opacity="0"/>
+		<rect id="Base" width="24.000000" height="24.000000" transform="matrix(-1 0 0 1 24 0)" fill="#FFFFFF" fill-opacity="1.000000"/>
+		<rect id="Base" width="24.000000" height="24.000000" transform="matrix(-1 0 0 1 24 0)" stroke="#979797" stroke-opacity="0" stroke-width="0.000000"/>
+	</g>
+</svg>
