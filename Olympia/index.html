@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сеть спортивных клубов Олимпия в Ростове-на-Дону. 3 фитнес-клуба с современным оборудованием, бассейном, групповыми тренировками и персональными тренерами.">
+    <meta name="keywords" content="фитнес клуб Ростов-на-Дону, спортзал Ростов, тренажерный зал, Олимпия фитнес, спортивный клуб">
+    <title>Олимпия — Сеть спортивных клубов в Ростове-на-Дону | Фитнес и тренажерный зал</title>
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Первый блок (Hero Section) -->
+    <section class="hero" id="home">
+        <!-- Фоновое изображение с затемнением -->
+        <div class="hero__background"></div>
+        <div class="hero__overlay"></div>
+        
+        <!-- Навигация -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav__logo">
+                        <h2>ОЛИМПИЯ</h2>
+                    </div>
+                    
+                    <button class="nav__burger" aria-label="Открыть меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <ul class="nav__menu">
+                        <li><a href="#clubs" class="nav__link">Клубы</a></li>
+                        <li><a href="#services" class="nav__link">Услуги</a></li>
+                        <li><a href="#prices" class="nav__link">Абонементы</a></li>
+                        <li><a href="#trainers" class="nav__link">Тренеры</a></li>
+                        <li><a href="#contacts" class="nav__link">Контакты</a></li>
+                    </ul>
+                    
+                    <a href="tel:+78632999999" class="nav__phone">+7 (863) 299-99-99</a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Основной контент Hero -->
+        <div class="hero__content">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <!-- Левая часть с контентом -->
+                    <div class="hero__left">
+                        <h1 class="hero__title">
+                            <span class="hero__title-main">Сеть спортивных клубов</span>
+                            <span class="hero__title-sub">в Ростове-на-Дону</span>
+                        </h1>
+                        
+                        <p class="hero__description">
+                            Современные фитнес-клубы с тренажёрными залами, бассейном, 
+                            групповыми программами и профессиональными тренерами. 
+                            <strong>3 клуба</strong> в разных районах города для вашего удобства.
+                        </p>
+                        
+                        <div class="hero__buttons">
+                            <button class="btn btn--primary" data-modal="trial">
+                                Получить пробную тренировку
+                            </button>
+                            <a href="#prices" class="btn btn--secondary">
+                                Посмотреть цены
+                            </a>
+                        </div>
+                        
+                        <!-- Преимущества -->
+                        <div class="hero__features">
+                            <div class="feature">
+                                <div class="feature__icon">📍</div>
+                                <div class="feature__text">
+                                    <strong>3 клуба</strong>
+                                    <span>в Ростове-на-Дону</span>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">🏋️</div>
+                                <div class="feature__text">
+                                    <strong>Новое оборудование</strong>
+                                    <span>лучших брендов</span>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">👥</div>
+                                <div class="feature__text">
+                                    <strong>Опытные тренеры</strong>
+                                    <span>с сертификатами</span>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature__icon">🏊</div>
+                                <div class="feature__text">
+                                    <strong>Бассейны</strong>
+                                    <span>25 и 50 метров</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Правая часть со слайдером -->
+                    <div class="hero__right">
+                        <div class="services-slider">
+                            <div class="services-slider__wrapper">
+                                <div class="services-slider__track">
+                                    <!-- Карточка 1 -->
+                                    <div class="service-card">
+                                        <div class="service-card__image">
+                                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000" alt="Гидромассаж">
+                                        </div>
+                                        <div class="service-card__content">
+                                            <h3 class="service-card__title">ГИДРОМАССАЖ</h3>
+                                            <p class="service-card__description">Расслабление и восстановление мышц после интенсивных тренировок</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Карточка 2 -->
+                                    <div class="service-card">
+                                        <div class="service-card__image">
+                                            <img src="https://avatars.mds.yandex.net/i?id=a347aa8575a68f834eaa70a2b3bf1820_l-5216677-images-thumbs&n=13" alt="Душ Шарко">
+                                        </div>
+                                        <div class="service-card__content">
+                                            <h3 class="service-card__title">ДУШ ШАРКО</h3>
+                                            <p class="service-card__description">Улучшение кровообращения и повышение тонуса организма</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Карточка 3 -->
+                                    <div class="service-card">
+                                        <div class="service-card__image">
+                                            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1000" alt="Ручной массаж">
+                                        </div>
+                                        <div class="service-card__content">
+                                            <h3 class="service-card__title">РУЧНОЙ МАССАЖ</h3>
+                                            <p class="service-card__description">Профессиональный массаж от сертифицированных специалистов</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Карточка 4 -->
+                                    <div class="service-card">
+                                        <div class="service-card__image">
+                                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000" alt="Аэробика">
+                                        </div>
+                                        <div class="service-card__content">
+                                            <h3 class="service-card__title">АЭРОБИКА</h3>
+                                            <p class="service-card__description">Групповые занятия для поддержания формы и отличного настроения</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Навигация слайдера -->
+                            <div class="services-slider__navigation">
+                                <button class="services-slider__arrow services-slider__arrow--prev" aria-label="Предыдущий слайд">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="services-slider__arrow services-slider__arrow--next" aria-label="Следующий слайд">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Индикаторы -->
+                            <div class="services-slider__dots">
+                                <button class="services-slider__dot active" data-slide="0"></button>
+                                <button class="services-slider__dot" data-slide="1"></button>
+                                <button class="services-slider__dot" data-slide="2"></button>
+                                <button class="services-slider__dot" data-slide="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Прокрутка вниз -->
+        <a href="#clubs" class="hero__scroll">
+            <span>Листайте вниз</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Второй блок - Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <!-- Заголовок секции -->
+            <div class="services__header">
+                <h2 class="section-title">
+                    <span class="section-title__label">Что мы предлагаем</span>
+                    <span class="section-title__main">Услуги наших клубов</span>
+                </h2>
+                <p class="section-subtitle">
+                    Наша команда постоянно работает над качеством обслуживания, 
+                    чтобы Вы эффективнее работали над собой!
+                </p>
+            </div>
+
+            <!-- Сетка услуг -->
+            <div class="services__grid">
+                <!-- Карточка 1 - Гидромассаж -->
+                <article class="service-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-item__icon">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800" alt="Гидромассаж" loading="lazy">
+                        <div class="service-item__icon-overlay"></div>
+                        <div class="service-item__number">01</div>
+                    </div>
+                    <div class="service-item__content">
+                        <h3 class="service-item__title">Гидромассаж</h3>
+                        <p class="service-item__description">
+                            Избавьтесь от отеков и обретите стройность! Гидромассаж – это 
+                            лимфодренажный массаж, который способствует уменьшению объемов тела, 
+                            даря легкость и подтянутый силуэт.
+                        </p>
+                        <a href="#prices" class="service-item__link">
+                            Узнать стоимость
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Карточка 2 - Душ Шарко -->
+                <article class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item__icon">
+                        <img src="https://avatars.mds.yandex.net/i?id=a347aa8575a68f834eaa70a2b3bf1820_l-5216677-images-thumbs&n=13" alt="Душ Шарко" loading="lazy">
+                        <div class="service-item__icon-overlay"></div>
+                        <div class="service-item__number">02</div>
+                    </div>
+                    <div class="service-item__content">
+                        <h3 class="service-item__title">Душ Шарко</h3>
+                        <p class="service-item__description">
+                            Забудьте о целлюлите и неровностях кожи! Душ Шарко – это мощная 
+                            антицеллюлитная программа, которая тонизирует кожу, улучшает 
+                            кровообращение и моделирует силуэт.
+                        </p>
+                        <a href="#prices" class="service-item__link">
+                            Узнать стоимость
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Карточка 3 - Ручной массаж -->
+                <article class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item__icon">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800" alt="Ручной массаж" loading="lazy">
+                        <div class="service-item__icon-overlay"></div>
+                        <div class="service-item__number">03</div>
+                    </div>
+                    <div class="service-item__content">
+                        <h3 class="service-item__title">Ручной массаж</h3>
+                        <p class="service-item__description">
+                            Подарите себе моменты истинного расслабления и восстановления! 
+                            Ручной массаж – это искусство, которое помогает снять стресс, 
+                            улучшить кровообращение и обрести гармонию тела и духа.
+                        </p>
+                        <a href="#prices" class="service-item__link">
+                            Узнать стоимость
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Карточка 4 - Аэробика -->
+                <article class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item__icon">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800" alt="Аэробика" loading="lazy">
+                        <div class="service-item__icon-overlay"></div>
+                        <div class="service-item__number">04</div>
+                    </div>
+                    <div class="service-item__content">
+                        <h3 class="service-item__title">Аэробика</h3>
+                        <p class="service-item__description">
+                            Почувствуйте прилив энергии и легкость в каждом движении! 
+                            Аэробные тренировки – это мощный заряд бодрости, эффективное 
+                            жиросжигание и укрепление здоровья, которые помогут вам достичь 
+                            желаемой формы и отличного самочувствия.
+                        </p>
+                        <a href="#prices" class="service-item__link">
+                            Узнать стоимость
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Карточка 5 - Тренажерный зал -->
+                <article class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item__icon">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800" alt="Тренажерный зал" loading="lazy">
+                        <div class="service-item__icon-overlay"></div>
+                        <div class="service-item__number">05</div>
+                    </div>
+                    <div class="service-item__content">
+                        <h3 class="service-item__title">Тренажерный зал</h3>
+                        <p class="service-item__description">
+                            Создайте тело своей мечты! В нашем тренажерном зале вы найдете 
+                            все необходимое для эффективных тренировок, развития силы и 
+                            выносливости, а также достижения желаемых результатов под 
+                            руководством опытных тренеров.
+                        </p>
+                        <a href="#prices" class="service-item__link">
+                            Узнать стоимость
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Большая карточка CTA -->
+                <article class="service-item service-item--cta" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-cta">
+                        <div class="service-cta__content">
+                            <h3 class="service-cta__title">Не нашли нужную услугу?</h3>
+                            <p class="service-cta__description">
+                                Свяжитесь с нами, и мы подберем для вас индивидуальную программу тренировок
+                            </p>
+                            <button class="btn btn--primary" data-modal="consultation">
+                                Получить консультацию
+                            </button>
+                        </div>
+                        <div class="service-cta__decoration">
+                            <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                                <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                                <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                                <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
