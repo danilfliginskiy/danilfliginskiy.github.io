@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abrau House - аренда уютных домиков на берегу озера Абрау. Идеальное место для отдыха в окружении природы.">
+    <meta name="keywords" content="аренда домиков, Абрау-Дюрсо, отдых на природе, озеро Абрау">
+    <title>Abrau House - Аренда уютных домиков на озере Абрау</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">Abrau House</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#houses">Домики</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <!-- Left Side - Content -->
+            <div class="hero-left">
+                <h1>
+                    Отдых мечты на <span class="highlight">озере Абрау</span>
+                </h1>
+                <p>
+                    Откройте для себя уютные домики в окружении живописной природы. 
+                    Идеальное место для семейного отдыха, романтических выходных 
+                    и корпоративных мероприятий.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Домиков</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Гостей</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Рейтинг</span>
+                    </div>
+                </div>
+                
+                <a href="#houses" class="cta-button">Выбрать домик</a>
+            </div>
+            
+            <!-- Right Side - Glass Cards -->
+            <div class="hero-right">
+                <div class="glass-card" onclick="scrollToHouses()">
+                    <div class="glass-card-price">5 500₽</div>
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&q=80" 
+                        alt="Лесной уют" 
+                        class="glass-card-image">
+                    <div class="glass-card-content">
+                        <h3 class="glass-card-title">Лесной уют</h3>
+                        <div class="glass-card-info">
+                            <span>👥 4 гостя</span>
+                            <span>📏 45 м²</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card" onclick="scrollToHouses()">
+                    <div class="glass-card-price">7 800₽</div>
+                    <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=600&q=80" 
+                        alt="Озерная панорама" 
+                        class="glass-card-image">
+                    <div class="glass-card-content">
+                        <h3 class="glass-card-title">Озерная панорама</h3>
+                        <div class="glass-card-info">
+                            <span>👥 6 гостей</span>
+                            <span>📏 65 м²</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card" onclick="scrollToHouses()">
+                    <div class="glass-card-price">4 200₽</div>
+                    <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80" 
+                        alt="Романтическое гнездышко" 
+                        class="glass-card-image">
+                    <div class="glass-card-content">
+                        <h3 class="glass-card-title">Романтика</h3>
+                        <div class="glass-card-info">
+                            <span>👥 2 гостя</span>
+                            <span>📏 30 м²</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card" onclick="scrollToHouses()">
+                    <div class="glass-card-price">12 500₽</div>
+                    <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=600&q=80" 
+                        alt="Премиум вилла" 
+                        class="glass-card-image">
+                    <div class="glass-card-content">
+                        <h3 class="glass-card-title">Премиум вилла</h3>
+                        <div class="glass-card-info">
+                            <span>👥 8 гостей</span>
+                            <span>📏 95 м²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Houses Section -->
+    <section class="houses-section" id="houses">
+        <div class="section-header">
+            <h2>Наши домики</h2>
+            <p>Выберите идеальное место для вашего отдыха среди наших комфортабельных домиков</p>
+        </div>
+
+        <div class="houses-grid">
+            <!-- House Card 1 -->
+            <div class="house-card">
+                <div class="card-slider">
+                    <div class="slider-images" data-slider="0">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&q=80" alt="Уютный домик у озера">
+                        <img src="https://images.unsplash.com/photo-1499916078039-922301b0eb9b?w=800&q=80" alt="Интерьер домика">
+                        <img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800&q=80" alt="Вид с террасы">
+                    </div>
+                    <button class="slider-arrow prev" onclick="changeSlide(0, -1)">‹</button>
+                    <button class="slider-arrow next" onclick="changeSlide(0, 1)">›</button>
+                    <div class="slider-controls">
+                        <span class="slider-dot active" onclick="goToSlide(0, 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide(0, 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide(0, 2)"></span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Лесной уют</h3>
+                    <div class="card-features">
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <span>4 гостя</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🛏️</span>
+                            <span>2 спальни</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📏</span>
+                            <span>45 м²</span>
+                        </div>
+                    </div>
+                    <p>Уютный домик с панорамными окнами и видом на озеро. Идеально для семейного отдыха.</p>
+                    <div class="card-footer">
+                        <div class="price">5 500₽ <span>/ ночь</span></div>
+                        <button class="book-button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- House Card 2 -->
+            <div class="house-card">
+                <div class="card-slider">
+                    <div class="slider-images" data-slider="1">
+                        <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800&q=80" alt="Современный домик">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80" alt="Гостиная">
+                        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=80" alt="Терраса с видом">
+                    </div>
+                    <button class="slider-arrow prev" onclick="changeSlide(1, -1)">‹</button>
+                    <button class="slider-arrow next" onclick="changeSlide(1, 1)">›</button>
+                    <div class="slider-controls">
+                        <span class="slider-dot active" onclick="goToSlide(1, 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide(1, 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide(1, 2)"></span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Озерная панорама</h3>
+                    <div class="card-features">
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <span>6 гостей</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🛏️</span>
+                            <span>3 спальни</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📏</span>
+                            <span>65 м²</span>
+                        </div>
+                    </div>
+                    <p>Просторный домик с камином и террасой. Прямой доступ к озеру и частный пляж.</p>
+                    <div class="card-footer">
+                        <div class="price">7 800₽ <span>/ ночь</span></div>
+                        <button class="book-button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- House Card 3 -->
+            <div class="house-card">
+                <div class="card-slider">
+                    <div class="slider-images" data-slider="2">
+                        <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&q=80" alt="Романтический домик">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" alt="Спальня">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Уютная атмосфера">
+                    </div>
+                    <button class="slider-arrow prev" onclick="changeSlide(2, -1)">‹</button>
+                    <button class="slider-arrow next" onclick="changeSlide(2, 1)">›</button>
+                    <div class="slider-controls">
+                        <span class="slider-dot active" onclick="goToSlide(2, 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide(2, 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide(2, 2)"></span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Романтическое гнездышко</h3>
+                    <div class="card-features">
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <span>2 гостя</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🛏️</span>
+                            <span>1 спальня</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📏</span>
+                            <span>30 м²</span>
+                        </div>
+                    </div>
+                    <p>Камерный домик для двоих с джакузи и видом на закат. Идеален для романтического отдыха.</p>
+                    <div class="card-footer">
+                        <div class="price">4 200₽ <span>/ ночь</span></div>
+                        <button class="book-button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- House Card 4 -->
+            <div class="house-card">
+                <div class="card-slider">
+                    <div class="slider-images" data-slider="3">
+                        <img src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&q=80" alt="Премиум домик">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Роскошный интерьер">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80" alt="Панорамный вид">
+                    </div>
+                    <button class="slider-arrow prev" onclick="changeSlide(3, -1)">‹</button>
+                    <button class="slider-arrow next" onclick="changeSlide(3, 1)">›</button>
+                    <div class="slider-controls">
+                        <span class="slider-dot active" onclick="goToSlide(3, 0)"></span>
+                        <span class="slider-dot" onclick="goToSlide(3, 1)"></span>
+                        <span class="slider-dot" onclick="goToSlide(3, 2)"></span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Премиум вилла</h3>
+                    <div class="card-features">
+                        <div class="feature">
+                            <span class="feature-icon">👥</span>
+                            <span>8 гостей</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🛏️</span>
+                            <span>4 спальни</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📏</span>
+                            <span>95 м²</span>
+                        </div>
+                    </div>
+                    <p>Роскошная вилла с сауной, бассейном и панорамными окнами. Для незабываемого отдыха.</p>
+                    <div class="card-footer">
+                        <div class="price">12 500₽ <span>/ ночь</span></div>
+                        <button class="book-button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
